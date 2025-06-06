@@ -1,10 +1,13 @@
 importlib-metadata==4.13.0
-gym==0.21
+gym==0.21.0
 stable-baselines3[extra]==1.7.0
 cython<3
 mujoco-py<2.2,>=2.1
 Jinja2==3.1.2
 scipy
 patchelf
-nevergrad==1.0.12
-seaborn>=0.12
+scikit-optimize
+seaborn
+botorch
+gpytorch
+tqdm

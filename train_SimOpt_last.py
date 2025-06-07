@@ -60,19 +60,19 @@ def main():
         
 
         # search space for masses: mu ± 2σ 
-        #search_space = [
-        #    Real(phi_masses["thigh"][0] - 2 * phi_masses["thigh"][1], phi_masses["thigh"][0] + 2 * phi_masses["thigh"][1], name="thigh"),
-        #    Real(phi_masses["leg"][0]   - 2 * phi_masses["leg"][1],   phi_masses["leg"][0]   + 2 * phi_masses["leg"][1],   name="leg"),
-        #    Real(phi_masses["foot"][0]  - 2 * phi_masses["foot"][1],  phi_masses["foot"][0]  + 2 * phi_masses["foot"][1],  name="foot")]
+        search_space = [
+            Real(phi_masses["thigh"][0] - 2 * phi_masses["thigh"][1], phi_masses["thigh"][0] + 2 * phi_masses["thigh"][1], name="thigh"),
+            Real(phi_masses["leg"][0]   - 2 * phi_masses["leg"][1],   phi_masses["leg"][0]   + 2 * phi_masses["leg"][1],   name="leg"),
+            Real(phi_masses["foot"][0]  - 2 * phi_masses["foot"][1],  phi_masses["foot"][0]  + 2 * phi_masses["foot"][1],  name="foot")]
 
         #search space for masses within a range of 0.5 to 2 times the real value masses (ground truth)
-        hopper = gym.make('CustomHopper-target-v0')
-        hopper_masses = hopper.get_parameters() 
-        search_space = [
-            Real(0.5* hopper_masses[1], 2*hopper_masses[1] , name="thigh"),
-            Real(0.5* hopper_masses[2], 2*hopper_masses[2] , name="leg"),
-            Real(0.5* hopper_masses[3], 2*hopper_masses[3] , name="foot")
-        ]
+        #hopper = gym.make('CustomHopper-target-v0')
+        #hopper_masses = hopper.get_parameters() 
+        #search_space = [
+        #    Real(0.5* hopper_masses[1], 2*hopper_masses[1] , name="thigh"),
+        #    Real(0.5* hopper_masses[2], 2*hopper_masses[2] , name="leg"),
+        #    Real(0.5* hopper_masses[3], 2*hopper_masses[3] , name="foot")
+        #]
         #check
         print("Search space for Bayesian Optimization:")
         for dim in search_space:
